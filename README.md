@@ -1,2 +1,9 @@
-# naukriscraper
-Scrapy project to crawl on naukri.com and scrape python jobs
+# Scrape naukri.com using Scrapy
+
+# Requirements
+
+1. [Python](https://www.python.org/downloads/)
+2. [Scrapy](https://scrapy.org/)
+3. [Scrapyd](https://scrapyd.readthedocs.io/en/stable/)
+
+
