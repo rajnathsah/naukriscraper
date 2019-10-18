@@ -85,10 +85,20 @@ class PythonJobSpider(scrapy.Spider):
                 )
 ```
 
-Defined USER_AGENT and FEED_URI in settings.py file
+Define USER_AGENT in settings.py file
+```python
+USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'
+```
 
 Run the spider to scrape data from project top directory.
 ```python
 scrapy crawl pythonjob
 ```
-This will crawl and link and save the file in scrapefiles folder.
+This will crawl the link and save the web page in scrapefiles folder.
+
+To save the yielded files, run below.
+```python
+scrapy crawl pythonjob -o pythonjob.json
+```
+
+# Deploy scrapy project on [scrapyd](https://scrapyd.readthedocs.io/en/stable/)
