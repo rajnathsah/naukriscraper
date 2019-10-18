@@ -101,4 +101,23 @@ To save the yielded files, run below.
 scrapy crawl pythonjob -o pythonjob.json
 ```
 
-# Deploy scrapy project on [scrapyd](https://scrapyd.readthedocs.io/en/stable/)
+# Deploy scrapy project using [scrapyd](https://scrapyd.readthedocs.io/en/stable/)
+
+Install scrapyd and scrapyd-client
+```python
+pip install scrapyd
+pip install git+https://github.com/scrapy/scrapyd-client
+```
+
+Start scrapyd server and verify the url http://localhost:6800/  
+
+Deploy the scrapy project from project folder directly by running below command.
+```python
+scrapyd-deploy samplescrapy -p naukriscraper
+```
+Run scrapy crawl run manually
+```python
+curl http://localhost:6800/schedule.json -d project=naukriscraper -d spider=pythonjob
+```
+
+Happy crawling.
